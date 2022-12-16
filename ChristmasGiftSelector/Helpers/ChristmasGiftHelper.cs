@@ -2,17 +2,9 @@ using ChristmasGiftSelector.Models;
 
 namespace ChristmasGiftSelector.Helpers;
 
-public interface IChristmasGiftSelectorHelper
+public class ChristmasGiftHelper : IChristmasGiftHelper
 {
-    public Task<Recipient> GetGiftPerson();
-    public Task PostNameAndEpost(User user);
-    public Task CreateNewGiftGroup(GiftGroup giftGroup);
-}
-
-
-public class ChristmasGiftHelper : IChristmasGiftSelectorHelper
-{
-    public async Task<Recipient> GetGiftPerson()
+    public Task<Recipient> GetGiftPerson()
     {
         var recipient = new Recipient
         {
@@ -20,10 +12,20 @@ public class ChristmasGiftHelper : IChristmasGiftSelectorHelper
             Email = "Email"
         };
 
-        return recipient;
+        return Task.FromResult(recipient);
     }
 
-    public Task PostNameAndEpost(User user)
+    public Task AddUser(User user)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task DeleteUser(User user)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task EditUser(User user)
     {
         throw new NotImplementedException();
     }

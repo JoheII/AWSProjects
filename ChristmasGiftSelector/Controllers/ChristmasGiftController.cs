@@ -9,14 +9,13 @@ namespace ChristmasGiftSelector.Controllers;
 public class ChristmasGift : ControllerBase
 {
     private readonly ILogger<ChristmasGift> _logger;
-    private readonly ChristmasGiftHelper _christmasGiftHelper;
+    private readonly IChristmasGiftHelper _christmasGiftHelper;
 
-    public ChristmasGift(ILogger<ChristmasGift> logger, ChristmasGiftHelper christmasGiftHelper)
+    public ChristmasGift(ILogger<ChristmasGift> logger, IChristmasGiftHelper christmasGiftHelper)
     {
         _logger = logger;
         _christmasGiftHelper = christmasGiftHelper;
     }
-
 
     [HttpGet("GetGiftPerson")]
     public Task<Recipient> GetGiftPerson()
@@ -24,12 +23,24 @@ public class ChristmasGift : ControllerBase
         return _christmasGiftHelper.GetGiftPerson();
     }
     
-    [HttpPost("PostNameAndEpost")]
-    public async Task PostNameAndEpost(User user)
+    [HttpPost("AddUser")]
+    public async Task AddUser(User user)
     {
-        await _christmasGiftHelper.PostNameAndEpost(user);
+        await _christmasGiftHelper.AddUser(user);
     }
     
+    [HttpPost("DeleteUser")]
+    public async Task DeleteUser(User user)
+    {
+        await _christmasGiftHelper.DeleteUser(user);
+    }    
+    
+    [HttpPost("EditUser")]
+    public async Task EditUser(User user)
+    {
+        await _christmasGiftHelper.EditUser(user);
+    }
+
     [HttpPost("CreateNewGiftGroup")]
     public async Task CreateNewGiftGroup(GiftGroup giftGroup)
     {
