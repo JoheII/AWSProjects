@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		template.yaml = template.yaml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasGiftSelector", "ChristmasGiftSelector\src\ChristmasGiftSelector\ChristmasGiftSelector.csproj", "{2A5B80B8-56DD-46D9-8A9E-0991259AD0CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChristmasGiftSelector", "ChristmasGiftSelector\ChristmasGiftSelector.csproj", "{0D63C3D1-7632-4635-9CB6-430A562C9347}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,9 +16,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A5B80B8-56DD-46D9-8A9E-0991259AD0CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A5B80B8-56DD-46D9-8A9E-0991259AD0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A5B80B8-56DD-46D9-8A9E-0991259AD0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A5B80B8-56DD-46D9-8A9E-0991259AD0CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D63C3D1-7632-4635-9CB6-430A562C9347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D63C3D1-7632-4635-9CB6-430A562C9347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D63C3D1-7632-4635-9CB6-430A562C9347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D63C3D1-7632-4635-9CB6-430A562C9347}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
