@@ -1,9 +1,16 @@
 using ChristmasGiftSelector.Models;
+using ChristmasGiftSelector.Repos;
 
 namespace ChristmasGiftSelector.Helpers;
 
 public class ChristmasGiftHelper : IChristmasGiftHelper
 {
+    private readonly IChristmasDB _christmasDB;
+    
+    public ChristmasGiftHelper(IChristmasDB christmasDB)
+    {
+        _christmasDB = christmasDB;
+    }
     public Task<Recipient> GetGiftPerson()
     {
         var recipient = new Recipient
@@ -15,9 +22,9 @@ public class ChristmasGiftHelper : IChristmasGiftHelper
         return Task.FromResult(recipient);
     }
 
-    public Task AddUser(User user)
+    public async Task AddUser(User user)
     {
-        throw new NotImplementedException();
+        await _christmasDB.AddUser(user);
     }
 
     public Task DeleteUser(User user)
